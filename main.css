@@ -1,0 +1,21 @@
+.container{
+    border:3px #2F343A solid;
+    margin: 0px;
+    max-width: fit-content;
+}
+.row{
+    margin:auto;
+    display: flex;
+}
+
+.box{
+    margin: 0px;
+    padding: 25px;
+    border:1px #2F343A solid;
+}
+
+
+
+.box_hover{
+    background-color: blue;
+}
