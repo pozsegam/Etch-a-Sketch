@@ -1,6 +1,19 @@
+.header{
+    margin: 10px;
+    padding: 10px;   
+}
+
+#labelRows{
+    padding-right: 10px;
+}
+
+#labelCols{
+    padding: 10px;
+}
+
+
 .container{
     border:3px #2F343A solid;
-    margin: 0px;
     max-width: fit-content;
 }
 .row{
@@ -17,5 +30,8 @@
 
 
 .box_hover{
-    background-color: blue;
+     margin: 0px;
+    padding: 25px;
+    border:1px #2F343A solid;
+    background-color: #57FF70;
 }

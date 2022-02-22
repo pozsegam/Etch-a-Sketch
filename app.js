@@ -10,17 +10,17 @@ for(let i = 0; i<16;i++){
     for(let j = 0;j<16;j++){
         let box = document.createElement('div');    
         box.className = 'box'
+        box.id = row.id +'box' + j; 
         row.appendChild(box);
+
+        box.addEventListener('mouseover',()=>{
+            box.className = 'box_hover';
+        });
     }
         
     container.appendChild(row);
 }
 
-const row = document.getElementById('row1');
-row.addEventListener('mouseover',function(e){
-    e.target.id.className = 'box_hover';
-    console.log(e.target.id)
-});
 
 
 
