@@ -1,24 +1,28 @@
+
 .header{
     margin: 10px;
     padding: 10px;   
 }
 
-#labelRows{
-    padding-right: 10px;
+.playAgain{
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-size: 28px;
+    background-color: #0388fc;
+    color:whitesmoke;
 }
-
-#labelCols{
-    padding: 10px;
-}
-
 
 .container{
     border:3px #2F343A solid;
-    max-width: fit-content;
+    height: 88vh;
+    width: fit-content;
 }
 .row{
     margin:auto;
     display: flex;
+    height: auto;
 }
 
 .box{
