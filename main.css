@@ -1,41 +1,9 @@
-
-.header{
-    margin: 10px;
-    padding: 10px;   
-}
-
-.playAgain{
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    padding: 10px 30px;
-    font-size: 28px;
-    background-color: #0388fc;
-    color:whitesmoke;
-}
-
-.container{
-    border:3px #2F343A solid;
-    height: 88vh;
-    width: fit-content;
-}
-.row{
-    margin:auto;
-    display: flex;
-    height: auto;
-}
-
-.box{
-    margin: 0px;
-    padding: 25px;
-    border:1px #2F343A solid;
+.board{
+    height: 600px;
+    width : 800px;
+    display: grid;
+    border:1px solid gray;
 }
 
 
 
-.box_hover{
-     margin: 0px;
-    padding: 25px;
-    border:1px #2F343A solid;
-    background-color: #57FF70;
-}

@@ -2,14 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>EtchASketch</title>
+    <title>Sketchpad</title>
     <link rel="stylesheet" href="main.css" defer>
     <script src="app.js" defer></script>
 </head>
 <body>
-    <div class ='header' id="header">
-        <button class="playAgain" id="playAgain">Reset</button>
+    <div class="flex-container">
+        <div class="sketchPad">
+            <div class="board"></div>
+            <div class="buttons">
+                <button>Eraser</button>
+                <button>Black</button>
+                <button>Random</button>
+                <button class="playAgain" id="playAgain" onclick="clearBoard()">Reset</button>
+            </div>
+            <div>
+                <input 
+                type="text" 
+                placeholder="Size of grid" 
+                value="16" 
+                onchange="changeBoardSize(this.value)"/>
+                <button>Set size</button>
+            </div>
+        </div>  
+
     </div>
-    <div id="container"></div>  
-</body>
+  </body>
 </html>

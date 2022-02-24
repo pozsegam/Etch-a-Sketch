@@ -1,47 +1,34 @@
-const container = document.getElementById('container');
-container.id = 'main';
-container.className = 'container';
 
+function makeBoard(size){
+    if(size>100) alert("Max size is 100")
+    let board = document.querySelector('.board');
+    //le kell takaritani a kijelzot, mielott megvaltoztatjuk a tabla meretet
+    let squares = board.querySelectorAll('div');
+    squares.forEach((div)=>div.remove())
 
-const input = 16;
-const playAgain = document.getElementById('playAgain');
-playAgain.addEventListener('click', ()=>{
-        box.className= 'box';
-        input = prompt("Grid Size?");
-});
+    board.style.gridTemplateRows = `repeat(${size},1fr)`;
+    board.style.gridTemplateColumns = `repeat(${size},1fr)`;
 
-
-
-function makeGrid(num){ 
-for(let i = 0; i<num;i++){
-    let row = document.createElement('div');
-    row.className = 'row';
-    row.id = "row"+i;
     
-    for(let j = 0;j<num;j++){
-        const box = document.createElement('div');    
-        box.className = 'box'
-        box.id = row.id +'box' + j; 
-        row.appendChild(box);
-
-        box.addEventListener('mouseover',function(e){
-            if(e.buttons ==1){
-                e.target.className = 'box_hover';
-            }
-        });
-        
-        
-
-
+    for(let i = 0;i<size*size;i++){
+        let square = document.createElement('div'); 
+        square.style.backgroundColor = 'white'; 
+        square.addEventListener('mouseover',colorSquare);
+        board.insertAdjacentElement('beforeend',square);
     }
-        
-    container.appendChild(row);
 }
 
 
+makeBoard(16);
+
+function changeBoardSize(input){
+    makeBoard(input);
 }
 
-makeGrid(30)
+function colorSquare(){
+    this.style.backgroundColor = 'black'; 
+}
 
-
-
+function clearBoard(){
+    //TODO
+}
