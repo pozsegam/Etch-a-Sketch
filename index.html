@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    </style> 
     <meta charset="UTF-8">
     <title>Sketchpad</title>
     <link rel="stylesheet" href="main.css" defer>
@@ -9,17 +12,19 @@
 <body>
     <div class="flex-container">
         <div class="sketchPad">
-            <div class="board"></div>
-            <div class="buttons">
-                <button>Eraser</button>
-                <button>Black</button>
-                <button>Random</button>
-                <button class="playAgain" id="playAgain" onclick="clearBoard()">Reset</button>
+            <div class="boardContainer">
+                <div class="board"></div>
             </div>
-            <div>
+            <div class="buttons">
+                <button onclick="changeColor('white')" >Eraser</button>
+                <button onclick="changeColor('gray')" >Gray</button>
+                <button onclick="changeColor('black')">Black</button>
+                <button onclick="changeColor('random')"> Random</button>
+                <button onclick="resetBoard()">Reset</button>
+            </div>
+            <div class="setSize">
                 <input 
-                type="text" 
-                placeholder="Size of grid" 
+                type="text"  
                 value="16" 
                 onchange="changeBoardSize(this.value)"/>
                 <button>Set size</button>

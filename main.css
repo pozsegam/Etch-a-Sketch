@@ -1,9 +1,44 @@
-.board{
-    height: 600px;
-    width : 800px;
-    display: grid;
-    border:1px solid gray;
+*{
+    font-family: Roboto;
+    font-size: 20px;
+    text-align: center;
+    background-color: #D8CF9E;
+}
+
+.boardContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons *{
+    background-color:#8F6A64 ;
+    border: none;
+    color: whitesmoke;
+    border-radius: 7px;
+    padding:5px 10px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.setSize *{
+     background-color:#8F6A64 ;
+    border: none;
+    cursor: pointer;
+    color: whitesmoke;
+    border-radius: 7px;
+}
+
+.setSize input{
+    background-color:#D19A6D ;  
 }
 
 
+.board{
+    background-color: #d1d1d1;
+    height: 600px;
+    width : 800px;
+    display: grid;
+    border:10px solid #5AA8A3;
+    border-radius: 10px;
+}
 
